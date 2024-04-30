@@ -1,3 +1,4 @@
+//Andres Felipe Rincon Sanchez  - 20221978013
 var Bicicleta =  function (id,color,modelo,ubicacion){
     this.id = id;
     this.color = color;

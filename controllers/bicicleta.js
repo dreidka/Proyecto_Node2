@@ -1,6 +1,7 @@
 const Bicicleta = require('../models/bicicleta');
 
 
+//Andres Felipe Rincon Sanchez  - 20221978013
 exports.bicicleta_list = function(req,res){
     res.render('bicicletas/index',{bicis: Bicicleta.allBicis});
 }
@@ -25,7 +26,7 @@ exports.bicicleta_update_post = function(req,res){
     bici.color=req.body.color;
     bici.modelo=req.body.modelo;
     bici.ubicacion = [req.body.lat,req.body.lgn];
-    
+
     res.redirect('/bicicletas');
 }
 exports.bicicleta_delete_post = function(req,res){
