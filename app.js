@@ -6,6 +6,10 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var biciRouter = require('./routes/bicicletas');
+
+var biciAPIRouter = require('./routes/api/bicicletas-api-routes');
+
 
 var app = express();
 
@@ -21,6 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/bicicletas', biciRouter);
+app.use('/api/bicicletas', biciAPIRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

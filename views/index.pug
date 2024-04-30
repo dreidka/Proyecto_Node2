@@ -1,464 +1,125 @@
 extends layout
 
 block content
-  // Navigation
-  nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
-    .container
-      a.navbar-brand(href='#page-top')
-        img(src='/assets/img/navbar-logo.svg' alt='...')
-      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
-        | Menu
-        i.fas.fa-bars.ms-1
-      #navbarResponsive.collapse.navbar-collapse
-        ul.navbar-nav.text-uppercase.ms-auto.py-4.py-lg-0
-          li.nav-item
-            a.nav-link(href='#services') Services
-          li.nav-item
-            a.nav-link(href='#portfolio') Portfolio
-          li.nav-item
-            a.nav-link(href='#about') About
-          li.nav-item
-            a.nav-link(href='#team') Team
-          li.nav-item
-            a.nav-link(href='#contact') Contact
+  nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top
+  .container.px-4.px-lg-5
+    a.navbar-brand(href='#page-top') Start Bootstrap
+    button.navbar-toggler.navbar-toggler-right(type='button' data-bs-toggle='collapse' data-bs-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+      | Menu
+      i.fas.fa-bars
+    #navbarResponsive.collapse.navbar-collapse
+      ul.navbar-nav.ms-auto
+        li.nav-item
+          a.nav-link(href='#about') About
+        li.nav-item
+          a.nav-link(href='#projects') Projects
+        li.nav-item
+          a.nav-link(href='#signup') Contact
   // Masthead
   header.masthead
-    .container
-      .masthead-subheading Welcome To Our Studio!
-      .masthead-heading.text-uppercase It&apos;s Nice To Meet You
-      a.btn.btn-primary.btn-xl.text-uppercase(href='#services') Tell Me More
-  // Services
-  section#services.page-section
-    .container
-      .text-center
-        h2.section-heading.text-uppercase Services
-        h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
-      .row.text-center
-        .col-md-4
-          span.fa-stack.fa-4x
-            i.fas.fa-circle.fa-stack-2x.text-primary
-            i.fas.fa-shopping-cart.fa-stack-1x.fa-inverse
-          h4.my-3 E-Commerce
-          p.text-muted
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-        .col-md-4
-          span.fa-stack.fa-4x
-            i.fas.fa-circle.fa-stack-2x.text-primary
-            i.fas.fa-laptop.fa-stack-1x.fa-inverse
-          h4.my-3 Responsive Design
-          p.text-muted
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-        .col-md-4
-          span.fa-stack.fa-4x
-            i.fas.fa-circle.fa-stack-2x.text-primary
-            i.fas.fa-lock.fa-stack-1x.fa-inverse
-          h4.my-3 Web Security
-          p.text-muted
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-  // Portfolio Grid
-  section#portfolio.page-section.bg-light
-    .container
-      .text-center
-        h2.section-heading.text-uppercase Portfolio
-        h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
-      .row
-        .col-lg-4.col-sm-6.mb-4
-          // Portfolio item 1
-          .portfolio-item
-            a.portfolio-link(data-bs-toggle='modal' href='#portfolioModal1')
-              .portfolio-hover
-                .portfolio-hover-content
-                  i.fas.fa-plus.fa-3x
-              img.img-fluid(src='/assets/img/portfolio/1.jpg' alt='...')
-            .portfolio-caption
-              .portfolio-caption-heading Threads
-              .portfolio-caption-subheading.text-muted Illustration
-        .col-lg-4.col-sm-6.mb-4
-          // Portfolio item 2
-          .portfolio-item
-            a.portfolio-link(data-bs-toggle='modal' href='#portfolioModal2')
-              .portfolio-hover
-                .portfolio-hover-content
-                  i.fas.fa-plus.fa-3x
-              img.img-fluid(src='/assets/img/portfolio/2.jpg' alt='...')
-            .portfolio-caption
-              .portfolio-caption-heading Explore
-              .portfolio-caption-subheading.text-muted Graphic Design
-        .col-lg-4.col-sm-6.mb-4
-          // Portfolio item 3
-          .portfolio-item
-            a.portfolio-link(data-bs-toggle='modal' href='#portfolioModal3')
-              .portfolio-hover
-                .portfolio-hover-content
-                  i.fas.fa-plus.fa-3x
-              img.img-fluid(src='/assets/img/portfolio/3.jpg' alt='...')
-            .portfolio-caption
-              .portfolio-caption-heading Finish
-              .portfolio-caption-subheading.text-muted Identity
-        .col-lg-4.col-sm-6.mb-4.mb-lg-0
-          // Portfolio item 4
-          .portfolio-item
-            a.portfolio-link(data-bs-toggle='modal' href='#portfolioModal4')
-              .portfolio-hover
-                .portfolio-hover-content
-                  i.fas.fa-plus.fa-3x
-              img.img-fluid(src='/assets/img/portfolio/4.jpg' alt='...')
-            .portfolio-caption
-              .portfolio-caption-heading Lines
-              .portfolio-caption-subheading.text-muted Branding
-        .col-lg-4.col-sm-6.mb-4.mb-sm-0
-          // Portfolio item 5
-          .portfolio-item
-            a.portfolio-link(data-bs-toggle='modal' href='#portfolioModal5')
-              .portfolio-hover
-                .portfolio-hover-content
-                  i.fas.fa-plus.fa-3x
-              img.img-fluid(src='/assets/img/portfolio/5.jpg' alt='...')
-            .portfolio-caption
-              .portfolio-caption-heading Southwest
-              .portfolio-caption-subheading.text-muted Website Design
-        .col-lg-4.col-sm-6
-          // Portfolio item 6
-          .portfolio-item
-            a.portfolio-link(data-bs-toggle='modal' href='#portfolioModal6')
-              .portfolio-hover
-                .portfolio-hover-content
-                  i.fas.fa-plus.fa-3x
-              img.img-fluid(src='/assets/img/portfolio/6.jpg' alt='...')
-            .portfolio-caption
-              .portfolio-caption-heading Window
-              .portfolio-caption-subheading.text-muted Photography
-  // About
-  section#about.page-section
-    .container
-      .text-center
-        h2.section-heading.text-uppercase About
-        h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
-      ul.timeline
-        li
-          .timeline-image
-            img.rounded-circle.img-fluid(src='/assets/img/about/1.jpg' alt='...')
-          .timeline-panel
-            .timeline-heading
-              h4 2009-2011
-              h4.subheading Our Humble Beginnings
-            .timeline-body
-              p.text-muted
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-        li.timeline-inverted
-          .timeline-image
-            img.rounded-circle.img-fluid(src='/assets/img/about/2.jpg' alt='...')
-          .timeline-panel
-            .timeline-heading
-              h4 March 2011
-              h4.subheading An Agency is Born
-            .timeline-body
-              p.text-muted
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-        li
-          .timeline-image
-            img.rounded-circle.img-fluid(src='/assets/img/about/3.jpg' alt='...')
-          .timeline-panel
-            .timeline-heading
-              h4 December 2015
-              h4.subheading Transition to Full Service
-            .timeline-body
-              p.text-muted
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-        li.timeline-inverted
-          .timeline-image
-            img.rounded-circle.img-fluid(src='/assets/img/about/4.jpg' alt='...')
-          .timeline-panel
-            .timeline-heading
-              h4 July 2020
-              h4.subheading Phase Two Expansion
-            .timeline-body
-              p.text-muted
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-        li.timeline-inverted
-          .timeline-image
-            h4
-              | Be Part
-              br
-              |                                 Of Our
-              br
-              |                                 Story!
-  // Team
-  section#team.page-section.bg-light
-    .container
-      .text-center
-        h2.section-heading.text-uppercase Our Amazing Team
-        h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
-      .row
-        .col-lg-4
-          .team-member
-            img.mx-auto.rounded-circle(src='/assets/img/team/1.jpg' alt='...')
-            h4 Parveen Anand
-            p.text-muted Lead Designer
-            a.btn.btn-dark.btn-social.mx-2(href='#!' aria-label='Parveen Anand Twitter Profile')
-              i.fab.fa-twitter
-            a.btn.btn-dark.btn-social.mx-2(href='#!' aria-label='Parveen Anand Facebook Profile')
-              i.fab.fa-facebook-f
-            a.btn.btn-dark.btn-social.mx-2(href='#!' aria-label='Parveen Anand LinkedIn Profile')
-              i.fab.fa-linkedin-in
-        .col-lg-4
-          .team-member
-            img.mx-auto.rounded-circle(src='/assets/img/team/2.jpg' alt='...')
-            h4 Diana Petersen
-            p.text-muted Lead Marketer
-            a.btn.btn-dark.btn-social.mx-2(href='#!' aria-label='Diana Petersen Twitter Profile')
-              i.fab.fa-twitter
-            a.btn.btn-dark.btn-social.mx-2(href='#!' aria-label='Diana Petersen Facebook Profile')
-              i.fab.fa-facebook-f
-            a.btn.btn-dark.btn-social.mx-2(href='#!' aria-label='Diana Petersen LinkedIn Profile')
-              i.fab.fa-linkedin-in
-        .col-lg-4
-          .team-member
-            img.mx-auto.rounded-circle(src='/assets/img/team/3.jpg' alt='...')
-            h4 Larry Parker
-            p.text-muted Lead Developer
-            a.btn.btn-dark.btn-social.mx-2(href='#!' aria-label='Larry Parker Twitter Profile')
-              i.fab.fa-twitter
-            a.btn.btn-dark.btn-social.mx-2(href='#!' aria-label='Larry Parker Facebook Profile')
-              i.fab.fa-facebook-f
-            a.btn.btn-dark.btn-social.mx-2(href='#!' aria-label='Larry Parker LinkedIn Profile')
-              i.fab.fa-linkedin-in
-      .row
-        .col-lg-8.mx-auto.text-center
-          p.large.text-muted
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
-  // Clients
-  .py-5
-    .container
-      .row.align-items-center
-        .col-md-3.col-sm-6.my-3
-          a(href='#!')
-            img.img-fluid.img-brand.d-block.mx-auto(src='/assets/img/logos/microsoft.svg' alt='...' aria-label='Microsoft Logo')
-        .col-md-3.col-sm-6.my-3
-          a(href='#!')
-            img.img-fluid.img-brand.d-block.mx-auto(src='/assets/img/logos/google.svg' alt='...' aria-label='Google Logo')
-        .col-md-3.col-sm-6.my-3
-          a(href='#!')
-            img.img-fluid.img-brand.d-block.mx-auto(src='/assets/img/logos/facebook.svg' alt='...' aria-label='Facebook Logo')
-        .col-md-3.col-sm-6.my-3
-          a(href='#!')
-            img.img-fluid.img-brand.d-block.mx-auto(src='/assets/img/logos/ibm.svg' alt='...' aria-label='IBM Logo')
-  // Contact
-  section#contact.page-section
-    .container
-      .text-center
-        h2.section-heading.text-uppercase Contact Us
-        h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
-      // * * * * * * * * * * * * * * *
-      // * * SB Forms Contact Form * *
-      // * * * * * * * * * * * * * * *
-      // This form is pre-integrated with SB Forms.
-      // To make this form functional, sign up at
-      // https://startbootstrap.com/solution/contact-forms
-      // to get an API token!
-      form#contactForm(data-sb-form-api-token='API_TOKEN')
-        .row.align-items-stretch.mb-5
-          .col-md-6
-            .form-group
-              // Name input
-              input#name.form-control(type='text' placeholder='Your Name *' data-sb-validations='required')
-              .invalid-feedback(data-sb-feedback='name:required') A name is required.
-            .form-group
-              // Email address input
-              input#email.form-control(type='email' placeholder='Your Email *' data-sb-validations='required,email')
-              .invalid-feedback(data-sb-feedback='email:required') An email is required.
-              .invalid-feedback(data-sb-feedback='email:email') Email is not valid.
-            .form-group.mb-md-0
-              // Phone number input
-              input#phone.form-control(type='tel' placeholder='Your Phone *' data-sb-validations='required')
-              .invalid-feedback(data-sb-feedback='phone:required') A phone number is required.
-          .col-md-6
-            .form-group.form-group-textarea.mb-md-0
-              // Message input
-              textarea#message.form-control(placeholder='Your Message *' data-sb-validations='required')
-              .invalid-feedback(data-sb-feedback='message:required') A message is required.
-        // Submit success message
-        // 
-        // This is what your users will see when the form
-        // has successfully submitted
-        #submitSuccessMessage.d-none
-          .text-center.text-white.mb-3
-            .fw-bolder Form submission successful!
-            |                             To activate this form, sign up at
-            br
-            a(href='https://startbootstrap.com/solution/contact-forms') https://startbootstrap.com/solution/contact-forms
-        // Submit error message
-        // 
-        // This is what your users will see when there is
-        // an error submitting the form
-        #submitErrorMessage.d-none
-          .text-center.text-danger.mb-3 Error sending message!
-        // Submit Button
+    .container.px-4.px-lg-5.d-flex.h-100.align-items-center.justify-content-center
+      .d-flex.justify-content-center
         .text-center
-          button#submitButton.btn.btn-primary.btn-xl.text-uppercase.disabled(type='submit') Send Message
-  // Footer
-  footer.footer.py-4
-    .container
-      .row.align-items-center
-        .col-lg-4.text-lg-start Copyright &copy; Your Website 2023
-        .col-lg-4.my-3.my-lg-0
-          a.btn.btn-dark.btn-social.mx-2(href='#!' aria-label='Twitter')
+          h1.mx-auto.my-0.text-uppercase Red de bicicletas
+          h2.text-white-50.mx-auto.mt-2.mb-5 A free, responsive, one page Bootstrap theme created by Start Bootstrap.
+          a.btn.btn-primary(href='#about') Get Started
+    // About
+    section#about.about-section.text-center
+      .container.px-4.px-lg-5
+        .row.gx-4.gx-lg-5.justify-content-center
+          .col-lg-8
+            h2.text-white.mb-4 Built with Bootstrap 5
+            p.text-white-50
+              | Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
+              a(href='https://startbootstrap.com/theme/grayscale/') the preview page.
+              |                             The theme is open source, and you can use it for any purpose, personal or commercial.
+        img.img-fluid(src='/assets/assets/img/ipad.png' alt='...')
+    // Projects
+    section#projects.projects-section.bg-light
+      .container
+        #main_map 
+    // Signup
+    section#signup.signup-section
+      .container.px-4.px-lg-5
+        .row.gx-4.gx-lg-5
+          .col-md-10.col-lg-8.mx-auto.text-center
+            i.far.fa-paper-plane.fa-2x.mb-2.text-white
+            h2.text-white.mb-5 Subscribe to receive updates!
+            // * * * * * * * * * * * * * * *
+            // * * SB Forms Contact Form * *
+            // * * * * * * * * * * * * * * *
+            // This form is pre-integrated with SB Forms.
+            // To make this form functional, sign up at
+            // https://startbootstrap.com/solution/contact-forms
+            // to get an API token!
+            form#contactForm.form-signup(data-sb-form-api-token='API_TOKEN')
+              // Email address input
+              .row.input-group-newsletter
+                .col
+                  input#emailAddress.form-control(type='email' placeholder='Enter email address...' aria-label='Enter email address...' data-sb-validations='required,email')
+                .col-auto
+                  button#submitButton.btn.btn-primary.disabled(type='submit') Notify Me!
+              .invalid-feedback.mt-2(data-sb-feedback='emailAddress:required') An email is required.
+              .invalid-feedback.mt-2(data-sb-feedback='emailAddress:email') Email is not valid.
+              // Submit success message
+              // 
+              // This is what your users will see when the form
+              // has successfully submitted
+              #submitSuccessMessage.d-none
+                .text-center.mb-3.mt-2.text-white
+                  .fw-bolder Form submission successful!
+                  |                                     To activate this form, sign up at
+                  br
+                  a(href='https://startbootstrap.com/solution/contact-forms') https://startbootstrap.com/solution/contact-forms
+              // Submit error message
+              // 
+              // This is what your users will see when there is
+              // an error submitting the form
+              #submitErrorMessage.d-none
+                .text-center.text-danger.mb-3.mt-2 Error sending message!
+    // Contact
+    section.contact-section.bg-black
+      .container.px-4.px-lg-5
+        .row.gx-4.gx-lg-5
+          .col-md-4.mb-3.mb-md-0
+            .card.py-4.h-100
+              .card-body.text-center
+                i.fas.fa-map-marked-alt.text-primary.mb-2
+                h4.text-uppercase.m-0 Address
+                hr.my-4.mx-auto
+                .small.text-black-50 4923 Market Street, Orlando FL
+          .col-md-4.mb-3.mb-md-0
+            .card.py-4.h-100
+              .card-body.text-center
+                i.fas.fa-envelope.text-primary.mb-2
+                h4.text-uppercase.m-0 Email
+                hr.my-4.mx-auto
+                .small.text-black-50
+                  a(href='#!') hello@yourdomain.com
+          .col-md-4.mb-3.mb-md-0
+            .card.py-4.h-100
+              .card-body.text-center
+                i.fas.fa-mobile-alt.text-primary.mb-2
+                h4.text-uppercase.m-0 Phone
+                hr.my-4.mx-auto
+                .small.text-black-50 +1 (555) 902-8832
+        .social.d-flex.justify-content-center
+          a.mx-2(href='#!')
             i.fab.fa-twitter
-          a.btn.btn-dark.btn-social.mx-2(href='#!' aria-label='Facebook')
+          a.mx-2(href='#!')
             i.fab.fa-facebook-f
-          a.btn.btn-dark.btn-social.mx-2(href='#!' aria-label='LinkedIn')
-            i.fab.fa-linkedin-in
-        .col-lg-4.text-lg-end
-          a.link-dark.text-decoration-none.me-3(href='#!') Privacy Policy
-          a.link-dark.text-decoration-none(href='#!') Terms of Use
-  // Portfolio Modals
-  // Portfolio item 1 modal popup
-  #portfolioModal1.portfolio-modal.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
-    .modal-dialog
-      .modal-content
-        .close-modal(data-bs-dismiss='modal')
-          img(src='/assets/img/close-icon.svg' alt='Close modal')
-        .container
-          #main_map
-  // Portfolio item 2 modal popup
-  #portfolioModal2.portfolio-modal.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
-    .modal-dialog
-      .modal-content
-        .close-modal(data-bs-dismiss='modal')
-          img(src='/assets/img/close-icon.svg' alt='Close modal')
-        .container
-          .row.justify-content-center
-            .col-lg-8
-              .modal-body
-                // Project details
-                h2.text-uppercase Project Name
-                p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
-                img.img-fluid.d-block.mx-auto(src='/assets/img/portfolio/2.jpg' alt='...')
-                p
-                  | Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
-                ul.list-inline
-                  li
-                    strong Client:
-                    |                                             Explore
-                  li
-                    strong Category:
-                    |                                             Graphic Design
-                button.btn.btn-primary.btn-xl.text-uppercase(data-bs-dismiss='modal' type='button')
-                  i.fas.fa-xmark.me-1
-                  |                                         Close Project
-  // Portfolio item 3 modal popup
-  #portfolioModal3.portfolio-modal.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
-    .modal-dialog
-      .modal-content
-        .close-modal(data-bs-dismiss='modal')
-          img(src='/assets/img/close-icon.svg' alt='Close modal')
-        .container
-          .row.justify-content-center
-            .col-lg-8
-              .modal-body
-                // Project details
-                h2.text-uppercase Project Name
-                p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
-                img.img-fluid.d-block.mx-auto(src='/assets/img/portfolio/3.jpg' alt='...')
-                p
-                  | Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
-                ul.list-inline
-                  li
-                    strong Client:
-                    |                                             Finish
-                  li
-                    strong Category:
-                    |                                             Identity
-                button.btn.btn-primary.btn-xl.text-uppercase(data-bs-dismiss='modal' type='button')
-                  i.fas.fa-xmark.me-1
-                  |                                         Close Project
-  // Portfolio item 4 modal popup
-  #portfolioModal4.portfolio-modal.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
-    .modal-dialog
-      .modal-content
-        .close-modal(data-bs-dismiss='modal')
-          img(src='/assets/img/close-icon.svg' alt='Close modal')
-        .container
-          .row.justify-content-center
-            .col-lg-8
-              .modal-body
-                // Project details
-                h2.text-uppercase Project Name
-                p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
-                img.img-fluid.d-block.mx-auto(src='/assets/img/portfolio/4.jpg' alt='...')
-                p
-                  | Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
-                ul.list-inline
-                  li
-                    strong Client:
-                    |                                             Lines
-                  li
-                    strong Category:
-                    |                                             Branding
-                button.btn.btn-primary.btn-xl.text-uppercase(data-bs-dismiss='modal' type='button')
-                  i.fas.fa-xmark.me-1
-                  |                                         Close Project
-  // Portfolio item 5 modal popup
-  #portfolioModal5.portfolio-modal.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
-    .modal-dialog
-      .modal-content
-        .close-modal(data-bs-dismiss='modal')
-          img(src='/assets/img/close-icon.svg' alt='Close modal')
-        .container
-          .row.justify-content-center
-            .col-lg-8
-              .modal-body
-                // Project details
-                h2.text-uppercase Project Name
-                p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
-                img.img-fluid.d-block.mx-auto(src='/assets/img/portfolio/5.jpg' alt='...')
-                p
-                  | Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
-                ul.list-inline
-                  li
-                    strong Client:
-                    |                                             Southwest
-                  li
-                    strong Category:
-                    |                                             Website Design
-                button.btn.btn-primary.btn-xl.text-uppercase(data-bs-dismiss='modal' type='button')
-                  i.fas.fa-xmark.me-1
-                  |                                         Close Project
-  // Portfolio item 6 modal popup
-  #portfolioModal6.portfolio-modal.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
-    .modal-dialog
-      .modal-content
-        .close-modal(data-bs-dismiss='modal')
-          img(src='/assets/img/close-icon.svg' alt='Close modal')
-        .container
-          .row.justify-content-center
-            .col-lg-8
-              .modal-body
-                // Project details
-                h2.text-uppercase Project Name
-                p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
-                img.img-fluid.d-block.mx-auto(src='/assets/img/portfolio/6.jpg' alt='...')
-                p
-                  | Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
-                ul.list-inline
-                  li
-                    strong Client:
-                    |                                             Window
-                  li
-                    strong Category:
-                    |                                             Photography
-                button.btn.btn-primary.btn-xl.text-uppercase(data-bs-dismiss='modal' type='button')
-                  i.fas.fa-xmark.me-1
-                  |                                         Close Project
-  // Bootstrap core JS
-  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
-  // Core theme JS
-  script(src='/js/scripts.js')
-  // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-  // * *                               SB Forms JS                               * *
-  // * * Activate your form at https://startbootstrap.com/solution/contact-forms * *
-  // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-  script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
-  script(src='/js/map.js')
-
-
+          a.mx-2(href='#!')
+            i.fab.fa-github
+    // Footer
+    footer.footer.bg-black.small.text-center.text-white-50
+      .container.px-4.px-lg-5 Copyright &copy; Your Website 2023
+    // Bootstrap core JS
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
+    // Core theme JS
+    script(src='/javascripts/scripts.js')
+    script(src='/javascripts/map.js')
+    // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+    // * *                               SB Forms JS                               * *
+    // * * Activate your form at https://startbootstrap.com/solution/contact-forms * *
+    // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+    script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
